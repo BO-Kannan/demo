@@ -1,0 +1,163 @@
+/* Reset */
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 18px;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* Display */
+.d-flex {
+    display: flex;
+}
+
+/* Justify */
+.j-center {
+    justify-content: center;
+}
+.j-between {
+    justify-content: space-between;
+}
+.j-around {
+    justify-content: space-around;
+}
+
+/* Align */
+.al-center {
+    align-items: center;
+}
+
+/* Button */
+.btn {
+    padding: .6rem 1.2rem;
+    font-size: 1rem !important;
+    border-radius: .4rem;
+    display: block;
+    width: fit-content;
+}
+.btn-primary {
+    background-color: transparent;
+    color: #541a8b;
+    border: 1px solid #541a8b;
+    transition: .2s;
+}
+.btn-primary:hover {
+    background-color: #541a8b;
+    color: #fff;
+}
+
+/* Header */
+.header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 10;
+}
+.header__logo {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #3f418d;
+}
+.header__nav {
+    background-color: #541a8b;
+    padding: 1.5rem 2rem;
+    display: none;
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+    right: 0;
+    transform-origin: top;
+    transition: .4s;
+}
+.header__nav ul {
+    margin-right: 0;
+    margin-bottom: 2.5rem;
+}
+.header__nav ul li {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+.header__nav ul li a {
+    color: #ffffff;
+}
+.header__nav ul li a:hover {
+    color: #d2d2d2;
+}
+.btn-primary {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+.btn-primary:hover {
+    background-color: #ffffff;
+    color: #541a8b;
+}
+#menu-toggle {
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Large Screens */
+@media screen and (min-width: 998px) {
+    .header {
+        padding: 2rem 3rem;
+    }
+    #menu-toggle {
+        display: none;
+    }
+    .header__nav {
+        background-color: transparent;
+        padding: 0;
+        position: static;
+        width: auto;
+        text-align: left;
+        display: flex !important; /* Ensure nav is displayed */
+    }
+    .header__nav ul {
+        margin-right: 3.5rem;
+        margin-bottom: 0;
+        display: flex;
+    }
+    .header__nav ul li {
+        display: inline-block;
+        margin: 0rem .5rem;
+    }
+    .header__nav ul li a {
+        color: #551a8b;
+        padding: .5rem 1rem;
+        border-radius: .2rem;
+    }
+    .header__nav ul li a:hover {
+        background-color: #541a8b09;
+        color: #541a8b;
+    }
+    .btn-primary {
+        color: #541a8b;
+        border-color: #541a8b;
+    }
+    .btn-primary:hover {
+        background-color: #541a8b;
+        color: #fff;
+    }
+}
